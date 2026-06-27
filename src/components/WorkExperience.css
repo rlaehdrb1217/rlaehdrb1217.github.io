@@ -1,0 +1,99 @@
+.work-experience .section-title,
+.work-experience .section-sub {
+  max-width: none;
+}
+
+.work-experience__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.work-experience__card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.work-experience__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.work-experience__number {
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.work-experience__badge {
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  padding: 5px 8px;
+  white-space: nowrap;
+}
+
+.work-experience__card h3 {
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.work-experience__card ul {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.work-experience__card li {
+  position: relative;
+  overflow-wrap: anywhere;
+  padding-left: 15px;
+  color: var(--color-text-secondary);
+  font-size: 0.93rem;
+}
+
+.work-experience__card li::before {
+  content: '';
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.work-experience__role {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.work-experience__role strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-accent-dark);
+  font-size: 0.88rem;
+}
+
+.work-experience__role p {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 840px) {
+  .work-experience__grid {
+    grid-template-columns: 1fr;
+  }
+}

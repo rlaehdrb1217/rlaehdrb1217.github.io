@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Dongkyu Kim portfolio favicon</title>
+  <rect width="64" height="64" rx="8" fill="#0f7f96"/>
+  <path fill="#fff" d="M16 18h12c8 0 13.5 5.4 13.5 14S36 46 28 46H16V18Zm8 7.5v13h3.6c4.8 0 7.6-2.5 7.6-6.5s-2.8-6.5-7.6-6.5H24Z"/>
+  <path fill="#dff7fb" d="M43 18h7.5L40 31.4 51.2 46h-8L33 32.4 43 18Z"/>
+</svg>
