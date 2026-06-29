@@ -1,4 +1,5 @@
 import { aiPrinciple, improvementCases } from '../data/portfolio';
+import ImageGallery from './ImageGallery';
 import './Improvements.css';
 
 export default function Improvements() {
@@ -12,30 +13,35 @@ export default function Improvements() {
         </p>
 
         <div className="improvements__grid">
-          {improvementCases.map((item) => (
-            <article key={item.title} className="improvements__card">
-              <div className="improvements__header">
-                <h3>{item.title}</h3>
-                <span>{item.label}</span>
-              </div>
-              <div className="improvements__block">
-                <h4>배경</h4>
-                <p>{item.background}</p>
-              </div>
-              <div className="improvements__block">
-                <h4>개선</h4>
-                <ul>
-                  {item.improvements.map((improvement) => (
-                    <li key={improvement}>{improvement}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="improvements__role">
-                <strong>역할</strong>
-                <p>{item.role}</p>
-              </div>
-            </article>
-          ))}
+          {improvementCases.map((item) => {
+            const images = 'images' in item ? item.images : undefined;
+
+            return (
+              <article key={item.title} className="improvements__card">
+                {images && images.length > 0 && <ImageGallery images={images} title={item.title} />}
+                <div className="improvements__header">
+                  <h3>{item.title}</h3>
+                  <span>{item.label}</span>
+                </div>
+                <div className="improvements__block">
+                  <h4>배경</h4>
+                  <p>{item.background}</p>
+                </div>
+                <div className="improvements__block">
+                  <h4>개선</h4>
+                  <ul>
+                    {item.improvements.map((improvement) => (
+                      <li key={improvement}>{improvement}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="improvements__role">
+                  <strong>역할</strong>
+                  <p>{item.role}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <p className="improvements__principle">{aiPrinciple}</p>

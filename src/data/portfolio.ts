@@ -3,6 +3,15 @@ import momentWeeklyAnalysisImage from '../assets/projects/moment-weekly-analysis
 import momentMonthlyAnalysisImage from '../assets/projects/moment-monthly-analysis.jpg';
 import simpleSudokuHomeImage from '../assets/projects/simple-sudoku-home.jpg';
 import simpleSudokuGameImage from '../assets/projects/simple-sudoku-game.jpg';
+import kimSungeup01Image from '../assets/projects/kim-sungeup-01.png';
+import kimSungeup02Image from '../assets/projects/kim-sungeup-02.png';
+import kimSungeup03Image from '../assets/projects/kim-sungeup-03.png';
+import kimSungeup04Image from '../assets/projects/kim-sungeup-04.png';
+import kimSungeup05Image from '../assets/projects/kim-sungeup-05.png';
+import kimSungeup06Image from '../assets/projects/kim-sungeup-06.png';
+import kimSungeup07Image from '../assets/projects/kim-sungeup-07.png';
+import kimSungeup08Image from '../assets/projects/kim-sungeup-08.png';
+import kimSungeup09Image from '../assets/projects/kim-sungeup-09.png';
 
 export type ProjectImage = {
   src: string;
@@ -234,6 +243,17 @@ export const improvementCases = [
       '과거 처리완료 월의 회계이력 보존',
       '증권과 계약서 첨부관리',
     ],
+    images: [
+      { src: kimSungeup01Image, alt: '김선급 선급비용매니저 화면 01' },
+      { src: kimSungeup02Image, alt: '김선급 선급비용매니저 화면 02' },
+      { src: kimSungeup03Image, alt: '김선급 선급비용매니저 화면 03' },
+      { src: kimSungeup04Image, alt: '김선급 선급비용매니저 화면 04' },
+      { src: kimSungeup05Image, alt: '김선급 선급비용매니저 화면 05' },
+      { src: kimSungeup06Image, alt: '김선급 선급비용매니저 화면 06' },
+      { src: kimSungeup07Image, alt: '김선급 선급비용매니저 화면 07' },
+      { src: kimSungeup08Image, alt: '김선급 선급비용매니저 화면 08' },
+      { src: kimSungeup09Image, alt: '김선급 선급비용매니저 화면 09' },
+    ] satisfies ProjectImage[],
     role: '실무 규칙 정의, 계산 기준 설계, 화면 기획, AI 활용 개발, 결과 검증',
   },
   {
