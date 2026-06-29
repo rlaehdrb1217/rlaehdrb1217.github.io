@@ -17,23 +17,28 @@ export default function Improvements() {
             const images = 'images' in item ? item.images : undefined;
 
             return (
-              <article key={item.title} className="improvements__card">
-                {images && images.length > 0 && <ImageGallery images={images} title={item.title} />}
+              <article
+                key={item.title}
+                className={`improvements__card${images && images.length > 0 ? ' improvements__card--with-media' : ''}`}
+              >
                 <div className="improvements__header">
                   <h3>{item.title}</h3>
                   <span>{item.label}</span>
                 </div>
-                <div className="improvements__block">
-                  <h4>배경</h4>
-                  <p>{item.background}</p>
-                </div>
-                <div className="improvements__block">
-                  <h4>개선</h4>
-                  <ul>
-                    {item.improvements.map((improvement) => (
-                      <li key={improvement}>{improvement}</li>
-                    ))}
-                  </ul>
+                {images && images.length > 0 && <ImageGallery images={images} title={item.title} />}
+                <div className="improvements__content">
+                  <div className="improvements__block">
+                    <h4>배경</h4>
+                    <p>{item.background}</p>
+                  </div>
+                  <div className="improvements__block">
+                    <h4>개선</h4>
+                    <ul>
+                      {item.improvements.map((improvement) => (
+                        <li key={improvement}>{improvement}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
                 <div className="improvements__role">
                   <strong>역할</strong>
